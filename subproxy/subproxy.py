@@ -99,7 +99,7 @@ def subproxy(cls: Callable[[Any], object]):
                         target=target, args=args, kwargs=kwargs)
                     process.start()
                 except AttributeError as e:
-                    logging.warn(
+                    logging.warning(
                         'subproc/ Context {} failed : {} | Retry.'.format(ctx_mode, e))
                     continue
                 self._process = process
