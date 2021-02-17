@@ -2,6 +2,15 @@
 
 General Subprocess Proxy Object.
 
+
+## Installation
+
+Mostly targetting pip for package management for now:
+
+```bash
+pip3 install subproxy
+```
+
 ## Usage
 
 Simplest example:
@@ -46,3 +55,11 @@ print(p.a['a']) # still 0
 ```
 
 This is because `p.a` would return a `dict` rather than a `subproxy(dict)`.
+
+## Packaging
+
+```bash
+# opti
+python3 setup.py sdist bdist_wheel
+twine upload dist/*
+```
